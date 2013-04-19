@@ -9,7 +9,8 @@ setup(
 	author='Feng Zhou',
 	author_email='zf.pascal@gmail.com',
 	packages=['fragment'],
-	install_requires=['markdown2', 'docopt'],
+	package_data={'fragment': ['*.html', 'style.css']},
+	install_requires=['markdown2', 'docopt', 'pystache'],
 	entry_points={
 		'console_scripts': ['fragment=fragment:main'],
 	},
