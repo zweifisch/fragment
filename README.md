@@ -1,7 +1,7 @@
 # fragment
 
-static sites generator that generate multiple html files from single markdown
-source file devided by the headlines
+a static site generator that generate multiple html files from a single
+markdown source file devided by the headlines
 
 e.g. `2013-04-19.md`
 ```markdown
@@ -26,11 +26,17 @@ will be splitted into two html files
     └── 2013-04-19.html
 ```
 
-why? a single file a day with every thing in it and still possible to publish
+Why? a single file a day with every thing in it and still possible to publish
 parts of it. On best to be used with vimwiki.
 
 ## usage
 
+install via pip
+```sh
+pip install fragment
+```
+
 ```sh
 fragment gen --output /var/www/ ~/wiki/diary/
+fragment -h
 ```
