@@ -104,7 +104,7 @@ def generate(source_folder, output, includes, extension):
 
 	for headline, files in headlines.items():
 		index_path = os.path.join(output, headline, 'index.html')
-		links = ({"link": f for f in files})
+		links = ({"link": f} for f in files)
 		with open(index_path, 'w') as index:
 			index.write(render(index_template, locals()))
 			print('wrote index %s %d links' % (index_path, len(files)))
@@ -112,7 +112,7 @@ def generate(source_folder, output, includes, extension):
 
 
 def main():
-	args = docopt(__doc__, version='fragment 0.0.1')
+	args = docopt(__doc__, version='fragment 0.0.2')
 	source_folder = args['<source_folder>']
 
 	if args['reset-templates']:
